@@ -4,6 +4,9 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 import android.util.Log;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.widget.TextView;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -28,17 +31,5 @@ public class MainActivity extends AppCompatActivity {
 //        Log.d("BBB",arrNames2[0] +"");
 
         // Collection : Dang mang theo nhom cau truc collection
-        List<String> strings = new ArrayList<>();
-        // Them du lieu
-        strings.add("Teo");
-        strings.add("Ti");
-        // Cap nhat
-        strings.set(0,"Tien");
-        // Xoa
-        strings.remove(0);
-        // Lay gia phan tu
-        Log.d("BBB",strings.get(0));
-        // Lay kich thuoc mang
-        Log.d("BBB",strings.size() + "");
     }
 }
