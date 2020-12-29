@@ -9,6 +9,7 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -33,5 +34,12 @@ public class MainActivity extends AppCompatActivity {
         mNowFoodVnAdapter = new NowFoodVnAdapter(mArrNowFoodVns);
         mRcvNowFoodVn.addItemDecoration(new DividerItemDecoration(this , DividerItemDecoration.VERTICAL));
         mRcvNowFoodVn.setAdapter(mNowFoodVnAdapter);
+
+        mNowFoodVnAdapter.setOnItemClickListener(new OnClickListenerItem() {
+            @Override
+            public void onClick(Integer position) {
+                Toast.makeText(MainActivity.this, mArrNowFoodVns.get(position).getName(), Toast.LENGTH_SHORT).show();
+            }
+        });
     }
 }

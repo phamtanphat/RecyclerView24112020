@@ -6,6 +6,7 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
@@ -18,7 +19,7 @@ public class NowFoodVnAdapter extends RecyclerView.Adapter<NowFoodVnAdapter.NowF
     //constructor : Phương thức khởi tạo
     List<NowFoodVn> mArrNowFoodVn;
     String mCategory = "";
-
+    OnClickListenerItem mOnClickListenerItem;
     public NowFoodVnAdapter(List<NowFoodVn> mArrNowFoodVn) {
         this.mArrNowFoodVn = mArrNowFoodVn;
     }
@@ -96,6 +97,18 @@ public class NowFoodVnAdapter extends RecyclerView.Adapter<NowFoodVnAdapter.NowF
             txtSaleOff = itemView.findViewById(R.id.textViewSaleOff);
             txtCategory = itemView.findViewById(R.id.textViewCategory);
             containerSaleOff = itemView.findViewById(R.id.linearContainerSaleOff);
+
+            itemView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    if (mOnClickListenerItem != null){
+                        mOnClickListenerItem.onClick(getAdapterPosition());
+                    }
+                }
+            });
         }
+    }
+    public void setOnItemClickListener(OnClickListenerItem mOnClickListenerItem){
+        this.mOnClickListenerItem = mOnClickListenerItem;
     }
 }
