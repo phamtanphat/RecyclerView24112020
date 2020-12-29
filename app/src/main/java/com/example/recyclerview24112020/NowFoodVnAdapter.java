@@ -68,7 +68,6 @@ public class NowFoodVnAdapter extends RecyclerView.Adapter<NowFoodVnAdapter.NowF
             mCategory = mCategory.substring(0 , mCategory.length() - 3);
             holder.txtCategory.setText(mCategory);
         }
-
     }
 
     @Override

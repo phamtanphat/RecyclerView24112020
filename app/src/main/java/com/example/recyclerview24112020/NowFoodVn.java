@@ -1,5 +1,6 @@
 package com.example.recyclerview24112020;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 
 public class NowFoodVn {
@@ -103,5 +104,14 @@ public class NowFoodVn {
                 ", saleOff='" + saleOff + '\'' +
                 ", category=" + Arrays.toString(category) +
                 '}';
+    }
+    public static ArrayList<NowFoodVn> getMock(){
+        return new ArrayList<>(Arrays.asList(
+                new NowFoodVn(true, R.drawable.hinhsuachuatranchau, "Sữa Chua Trân Châu Hạ Long HCM", new String[64], 20, 37, "FREE SHIP", new String[0]),
+                new NowFoodVn(false, R.drawable.hinhsuachuatranchau, "Cá Viên Chiên - Lương Hữu Khánh", new String[]{"33A Lương Hữu Khánh, Quận 1, TP. HCM"}, 20, 60, "", new String[]{"QUÁN ĂN","ĂN VẶT/VỈA HÈ"}),
+                new NowFoodVn(true, R.drawable.hinhgo79seafood, "Go79 Seafood - Gỏi Ốc & Cháo Hải Sản Nha Trang", new String[6], 20, 54, "Mã giảm 30k", new String[]{}),
+                new NowFoodVn(true, R.drawable.hinhconsoisuatuongchantrau, "Con Sói - Sữa Tươi Chân Trâu Đường Đen", new String[8], 20, 33, "Deal 12k", new String[]{}),
+                new NowFoodVn(true, R.drawable.hinhocxuyenchobanco, "Ốc Xuyên - Chợ Bàn Cờ", new String[]{"174 Nguyễn Thiện Thuật, P.3, Quận 3, TP.HCM"}, 20, 57, "", new String[]{"ĂN VẶT/VỈA HÈ"})
+        ));
     }
 }

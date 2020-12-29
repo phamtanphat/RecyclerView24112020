@@ -1,6 +1,7 @@
 package com.example.recyclerview24112020;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
 import android.util.Log;
@@ -15,21 +16,18 @@ import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
 
+    RecyclerView mRcvNowFoodVn;
+    List<NowFoodVn> mArrNowFoodVns;
+    NowFoodVnAdapter mNowFoodVnAdapter;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-//        Array : Dang mang Array
-//        Cach 1: Khoi tao va gan gia tri
-//                            0 , 1 ,2
-//        String[] arrNames = {"Teo","Ti","Tun"};
-//        arrNames[0] = "Tien";
-//        Log.d("BBB",arrNames[0]);
-//        Cach 2 : Khoi tao kich thuoc
-//        String[] arrNames2 = new String[2];
-//        Log.d("BBB",arrNames2[0] +"");
+        mRcvNowFoodVn = findViewById(R.id.recycleNowVn);
 
-        // Collection : Dang mang theo nhom cau truc collection
+        mArrNowFoodVns = NowFoodVn.getMock();
+        // data mock : data giả
     }
 }
