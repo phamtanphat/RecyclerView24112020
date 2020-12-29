@@ -8,7 +8,6 @@
     tools:context=".MainActivity">
    
     <androidx.recyclerview.widget.RecyclerView
-        app:fastScrollEnabled="true"
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
         tools:listitem="@layout/layout_item_nowfood"
         android:id="@+id/recycleNowVn"

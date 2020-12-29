@@ -65,7 +65,7 @@ public class NowFoodVnAdapter extends RecyclerView.Adapter<NowFoodVnAdapter.NowF
             for (int i = 0; i < nowFoodVn.getCategory().length; i++) {
                 mCategory += nowFoodVn.getCategory()[i] + ", ";
             }
-            mCategory = mCategory.substring(0 , mCategory.length() - 3);
+            mCategory = mCategory.substring(0 , mCategory.length() - 2);
             holder.txtCategory.setText(mCategory);
         }
     }

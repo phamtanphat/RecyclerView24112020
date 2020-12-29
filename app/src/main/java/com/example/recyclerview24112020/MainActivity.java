@@ -1,6 +1,7 @@
 package com.example.recyclerview24112020;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.DividerItemDecoration;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
@@ -29,5 +30,8 @@ public class MainActivity extends AppCompatActivity {
 
         mArrNowFoodVns = NowFoodVn.getMock();
         // data mock : data giả
+        mNowFoodVnAdapter = new NowFoodVnAdapter(mArrNowFoodVns);
+        mRcvNowFoodVn.addItemDecoration(new DividerItemDecoration(this , DividerItemDecoration.VERTICAL));
+        mRcvNowFoodVn.setAdapter(mNowFoodVnAdapter);
     }
 }
