@@ -38,7 +38,8 @@ public class MainActivity extends AppCompatActivity {
         mNowFoodVnAdapter.setOnItemClickListener(new OnClickListenerItem() {
             @Override
             public void onClick(Integer position) {
-                Toast.makeText(MainActivity.this, mArrNowFoodVns.get(position).getName(), Toast.LENGTH_SHORT).show();
+                mArrNowFoodVns.remove(Integer.parseInt(position + ""));
+                mNowFoodVnAdapter.notifyItemRemoved(Integer.parseInt(position + ""));
             }
         });
     }
